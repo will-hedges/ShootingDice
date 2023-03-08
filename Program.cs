@@ -32,9 +32,14 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
-            List<Player> players = new List<Player>() {
-                player1, player2, player3, large
-            };
+            SmackTalkingPlayer smackTalker = new SmackTalkingPlayer(
+                "I'm only 19 and I'm STILL better than you!"
+            );
+            smackTalker.Name = "Logan Gray";
+
+            smackTalker.Play(player3);
+
+            List<Player> players = new List<Player>() { player1, player2, player3, large };
 
             PlayMany(players);
         }
@@ -47,7 +52,9 @@ namespace ShootingDice
             // We "order" the players by a random number
             // This has the effect of shuffling them randomly
             Random randomNumberGenerator = new Random();
-            List<Player> shuffledPlayers = players.OrderBy(p => randomNumberGenerator.Next()).ToList();
+            List<Player> shuffledPlayers = players
+                .OrderBy(p => randomNumberGenerator.Next())
+                .ToList();
 
             // We are going to match players against each other
             // This means we need an even number of players
