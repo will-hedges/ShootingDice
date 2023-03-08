@@ -31,6 +31,9 @@ namespace ShootingDice
             HumanPlayer human = new HumanPlayer();
             human.Name = "Ima Robut";
 
+            CreativeSmackTalkingPlayer creativeSmackTalker = new CreativeSmackTalkingPlayer();
+            creativeSmackTalker.Name = "Chris Hanson";
+
             List<Player> players = new List<Player>()
             {
                 player1,
@@ -39,7 +42,8 @@ namespace ShootingDice
                 large,
                 smackTalker,
                 oneHigher,
-                human
+                human,
+                creativeSmackTalker
             };
 
             PlayMany(players);
