@@ -28,6 +28,9 @@ namespace ShootingDice
             OneHigherPlayer oneHigher = new OneHigherPlayer();
             oneHigher.Name = "Slick Rick";
 
+            HumanPlayer human = new HumanPlayer();
+            human.Name = "Ima Robut";
+
             List<Player> players = new List<Player>()
             {
                 player1,
@@ -36,6 +39,7 @@ namespace ShootingDice
                 large,
                 smackTalker,
                 oneHigher,
+                human
             };
 
             PlayMany(players);
