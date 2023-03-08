@@ -37,6 +37,9 @@ namespace ShootingDice
             SoreLoserPlayer soreLoser = new SoreLoserPlayer();
             soreLoser.Name = "Kaci Wooldridge";
 
+            UpperHalfPlayer upperHalf = new UpperHalfPlayer();
+            upperHalf.Name = "Jack \"High Roller\" Roller";
+
             List<Player> players = new List<Player>()
             {
                 player1,
@@ -47,7 +50,8 @@ namespace ShootingDice
                 oneHigher,
                 human,
                 creativeSmackTalker,
-                soreLoser
+                soreLoser,
+                upperHalf
             };
 
             try
