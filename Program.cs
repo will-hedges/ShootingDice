@@ -34,6 +34,9 @@ namespace ShootingDice
             CreativeSmackTalkingPlayer creativeSmackTalker = new CreativeSmackTalkingPlayer();
             creativeSmackTalker.Name = "Chris Hanson";
 
+            SoreLoserPlayer soreLoser = new SoreLoserPlayer();
+            soreLoser.Name = "Kaci Wooldridge";
+
             List<Player> players = new List<Player>()
             {
                 player1,
@@ -43,10 +46,18 @@ namespace ShootingDice
                 smackTalker,
                 oneHigher,
                 human,
-                creativeSmackTalker
+                creativeSmackTalker,
+                soreLoser
             };
 
-            PlayMany(players);
+            try
+            {
+                PlayMany(players);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         static void PlayMany(List<Player> players)
