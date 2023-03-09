@@ -3,7 +3,6 @@ using System;
 namespace ShootingDice
 {
     // A Player that throws an exception when they lose to the other player
-    // Where might you catch this exception????
     public class SoreLoserPlayer : Player
     {
         public override void Play(Player other)
@@ -20,7 +19,7 @@ namespace ShootingDice
             }
             else if (myRoll < otherRoll)
             {
-                throw new Exception($"{Name} says \"I'm taking my dice and going home!\"");
+                throw new SoreLoserException($"{Name} says \"I'm taking my dice and going home!\"");
             }
             else
             {

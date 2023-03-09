@@ -26,7 +26,7 @@ namespace ShootingDice
             }
             else if (myRoll < otherRoll)
             {
-                throw new Exception(
+                throw new SoreLoserException(
                     $"{Name} says \"You're playing with loaded dice! I'm outta here!\""
                 );
             }
